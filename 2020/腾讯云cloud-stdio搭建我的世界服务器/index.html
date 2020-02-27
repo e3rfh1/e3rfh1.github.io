@@ -358,16 +358,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -528,16 +518,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
   
-  
-
-
 
         </div>
         
@@ -844,45 +825,26 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname, id: '{{ page.date }}',
-            owner: 'e3rfh1',
-            repo: 'gitment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: '62454318bc2baad3fe5425e70cf0cf20ce7d410b',
-            
-                client_id: 'b7d87000a9f7837f87e7'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '88d51985c210f1d09384',
+          clientSecret: '5e6139b06b71f717a1e538d7b1b96992e4cb539a',
+          repo: 'gitalk',
+          owner: 'e3rfh1',
+          admin: ['e3rfh1'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
 
