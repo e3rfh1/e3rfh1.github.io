@@ -91,19 +91,17 @@
 
 <meta name="description" content="E3RFH的博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Photos">
-<meta property="og:url" content="https://e3rfh1.github.io/Photos/index.html">
+<meta property="og:title" content="photos">
+<meta property="og:url" content="https://e3rfh1.github.io/photos/index.html">
 <meta property="og:site_name" content="E3RFH&#39;s Blog">
 <meta property="og:description" content="E3RFH的博客">
-<meta property="og:image" content="https://raw.githubusercontent.com/e3rfh2/photos/master/img/user.jpg">
-<meta property="article:published_time" content="2020-02-27T12:43:26.000Z">
-<meta property="article:modified_time" content="2020-02-27T13:04:27.417Z">
+<meta property="article:published_time" content="2020-03-04T10:31:10.000Z">
+<meta property="article:modified_time" content="2020-03-04T10:31:29.998Z">
 <meta property="article:author" content="E3RFH">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="E3RFH">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/e3rfh2/photos/master/img/user.jpg">
 
 
 
@@ -133,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://e3rfh1.github.io/Photos/"/>
+  <link rel="canonical" href="https://e3rfh1.github.io/photos/"/>
 
 
 
 
 
-  <title>Photos | E3RFH's Blog</title>
+  <title>photos | E3RFH's Blog</title>
   
 
 
@@ -179,7 +177,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">E3RFH的博客</p>
+        <p class="site-subtitle">有所作为是生活的最高境界。——恩格斯</p>
       
   </div>
 
@@ -244,7 +242,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
             
-            喜欢
+            收藏夹
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-image"></i> <br />
+            
+            图片
           </a>
         </li>
       
@@ -303,93 +311,33 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-picture" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://e3rfh1.github.io/Photos/index.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="E3RFH">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/E3RFH.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="E3RFH's Blog">
-    </span>
-
-    
-
     
     
-    
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">photos</h1>
+
+
+
+</header>
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="https://raw.githubusercontent.com/e3rfh2/photos/master/img/user.jpg" rel="gallery_ck74rxm7200008ogzena051i9"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://raw.githubusercontent.com/e3rfh2/photos/master/img/user.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
       
-
-      
+      <div class="post-body">
         
+        
+          
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -398,6 +346,14 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+  
+
+
 
         </div>
         
@@ -493,7 +449,12 @@
       
 
       
-
+	  
+	
+	  
+	  
+	 
+    
     </div>
   </aside>
 
@@ -681,6 +642,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'udurJMcezEthzHX24u4Yw9qw-MdYXbMMI',
+        appKey: 'tJc3lA7aXJWFkDTBFmyQGtXB',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

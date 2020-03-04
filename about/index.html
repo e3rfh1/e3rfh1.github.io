@@ -177,7 +177,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">E3RFH的博客</p>
+        <p class="site-subtitle">有所作为是生活的最高境界。——恩格斯</p>
       
   </div>
 
@@ -242,7 +242,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
             
-            喜欢
+            收藏夹
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-image"></i> <br />
+            
+            图片
           </a>
         </li>
       
@@ -431,7 +441,12 @@
       
 
       
-
+	  
+	
+	  
+	  
+	 
+    
     </div>
   </aside>
 
@@ -619,6 +634,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'udurJMcezEthzHX24u4Yw9qw-MdYXbMMI',
+        appKey: 'tJc3lA7aXJWFkDTBFmyQGtXB',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
