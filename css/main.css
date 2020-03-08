@@ -189,7 +189,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #f5f7f9;
+  background: #eee;
 }
 @media (max-width: 767px) {
   body {
@@ -1935,7 +1935,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c32173;
+  background: #ffa72f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2737,9 +2737,9 @@ img:hover {
   overflow: hidden;
   padding: 0;
   width: 240px;
-  background: #fff;
-  box-shadow: initial;
-  border-radius: initial;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 15px 15px 15px 15px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2796,10 +2796,10 @@ img:hover {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   min-height: 700px;
-  box-shadow: initial;
-  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 15px 15px 15px 15px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -2821,7 +2821,7 @@ img:hover {
   float: left;
   margin-top: 300px;
   width: 240px;
-  background: #f5f7f9;
+  background: rgba(255,255,255,0.6);
   box-shadow: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2978,9 +2978,9 @@ img:hover {
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background: #fff;
-  box-shadow: initial;
-  border-radius: initial;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  border-radius: 15px;
   opacity: 0;
 }
 .sidebar-inner.affix {
