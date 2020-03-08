@@ -32,13 +32,13 @@ const ap = new APlayer({
         artist: 'DAISHI DANCE / Cecile Corbel',
         url: 'http://music.163.com/song/media/outer/url?id=26092806.mp3',
         cover: 'http://p2.music.126.net/AoVFMKkLVMOmTMo_A6x02g==/109951163403515653.jpg?param=130y130',
-	  },
+      },
       {
         name: '愛にできることはまだあるかい ',
         artist: 'RADWIMPS',
         url: 'http://music.163.com/song/media/outer/url?id=1378491298.mp3',
-        cover: 'http://p1.music.126.net/dRwInA9PpkiKkmNWeUvi0w==/109951164220136544.jpg?param=130y130',
-	  },
+        cover: 'http://p1.music.126.net/dRwInA9PpkiKkmNWeUvi0w==/109951164220136544.jpg?param=130y130',  
+      },
       {
         name: 'グランドエスケープ (Movie edit) ',
         artist: '三浦透子',
