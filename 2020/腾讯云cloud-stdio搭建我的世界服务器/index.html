@@ -167,6 +167,7 @@
   <script type="text/javascript" src="/dist/APlayer.min.js"></script>
   <script type="text/javascript" src="/dist/music.js"></script>
 
+
   
   
     
@@ -451,13 +452,13 @@
 <li>新建一个工作空间并打开<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/2.png" class=""></li>
 <li>等待一段时间后进入这个画面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/3.png" class=""></li>
 <li>按 Ctrl+ ~(键盘左上方ESC下面的按键)或点击<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png" class="">呼出终端</li>
-<li>接下来就是软件库更新,你需要依次在终端输入以下指令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get upgrade</span><br></pre></td></tr></table></figure></li>
-<li>接下来需要安装Minecraft服务器运行所需要的一些基础运行环境，你需要输入以下指令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nano wget screen bash default-jdk ufw</span><br></pre></td></tr></table></figure>
+<li>接下来就是软件库更新,你需要依次在终端输入以下指令：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="builtin-name">get</span> update</span><br><span class="line">apt-<span class="builtin-name">get</span> upgrade</span><br></pre></td></tr></table></figure></li>
+<li>接下来需要安装Minecraft服务器运行所需要的一些基础运行环境，你需要输入以下指令：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="builtin-name">get</span> install nano wget<span class="built_in"> screen </span>bash default-jdk ufw</span><br></pre></td></tr></table></figure>
 注：若出现如图所示的情况（正常情况都会出现）
 出现此语句输入“Y”即可</li>
 </ul>
 <h1 id="二-服务器搭建"><a href="#二-服务器搭建" class="headerlink" title="二,服务器搭建"></a>二,服务器搭建</h1><ul>
-<li>新建两文件夹,依次输入以下命令(括号内的内容不用输入)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir Minecraft     (此文件夹用来放置服务器)</span><br><span class="line">mkdir ftp           (此文件夹用来放置端口映射)</span><br></pre></td></tr></table></figure></li>
+<li>新建两文件夹,依次输入以下命令(括号内的内容不用输入)<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">mkdir</span> <span class="title">Minecraft</span>     <span class="params">(此文件夹用来放置服务器)</span></span></span><br><span class="line"><span class="function"><span class="built_in">mkdir</span> <span class="title">ftp</span>           <span class="params">(此文件夹用来放置端口映射)</span></span></span><br></pre></td></tr></table></figure></li>
 <li>接着就是下载安装服务器<br>打开服务器文件下载地址,这里以<a href="https://mcversions.net/" target="_blank" rel="noopener">Mcversions</a> 为例<br>打开网址后 选择你要下载的服务器文件<br>这里以1.14.3为例<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/6.png" class="">
 单击下载后出现以下界面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/7.png" class="">
 将鼠标移至第一个按钮，右键复制链接地址<br>接着进入刚刚新建的文件夹<br>输入 cd  Minecratf<br>再次输入 wget 刚才复制的链接地址
@@ -721,7 +722,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">❤博客全站共3k字❤</span>
+  <span class="post-count">❤博客全站共2.9k字❤</span>
 </div>
 
 
@@ -1261,6 +1262,8 @@
   <!--动态背景-->
   
     <script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
+  
+  
   
   
   
