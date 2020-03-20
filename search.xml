@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Markdown语法</title>
+    <title>Hexo+Github搭建博客和美化</title>
+    <url>/2020/Hexo-Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%92%8C%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><h3 id="1-1准备工作"><a href="#1-1准备工作" class="headerlink" title="1.1准备工作"></a>1.1准备工作</h3><p>1.一个Github账号,如果没有可以<a href="https://github.com/join?source=header-home/" target="_blank" rel="noopener">点击此处</a>注册<br>2.安装了node.js,npm,并了解其基础知识<br>3.安装了git客户端</p>
+<h3 id="1-2工作环境"><a href="#1-2工作环境" class="headerlink" title="1.2工作环境"></a>1.2工作环境</h3><ul>
+<li>Windows8.1</li>
+<li>node.js(v12.16.1)</li>
+<li>npm(v6.13.4)</li>
+<li>Hexo(v4.2.0)<h2 id="2-创建Github博客"><a href="#2-创建Github博客" class="headerlink" title="2.创建Github博客"></a>2.创建Github博客</h2><h3 id="2-1创建仓库"><a href="#2-1创建仓库" class="headerlink" title="2.1创建仓库"></a>2.1创建仓库</h3>新建一个名为<code>你的用户名.github.io</code>的仓库，比如说，如果你的github用户名是test，那么你就新建<code>test.github.io</code>的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 <a href="http://test.github.io" target="_blank" rel="noopener">http://test.github.io</a> 了，是不是很方便？<br>由此可见，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。<br>几个注意的地方:  <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>注册的邮箱一定要验证，否则不会成功</span><br><span class="line"><span class="number">2.</span>仓库名字必须是：username.github.io ，其中 username 是你的用户名</span><br><span class="line"><span class="number">3.</span>仓库创建成功不会立即生效，需要过一段时间才能使用</span><br></pre></td></tr></table></figure>
+<h2 id="2-2绑定域名"><a href="#2-2绑定域名" class="headerlink" title="2.2绑定域名"></a>2.2绑定域名</h2>注: 你的Github博客域名可绑定也可不绑,但拥有一个域名并绑定到你的博客,瞬间b格满满  </li>
+</ul>
+<p>1.注册<a href="https://www.freenom.com/" target="_blank" rel="noopener">freenom</a>供应的免费域名(注全程必须在你本来的ip地址下注册,否则将会出现问题)<br>2.使用<a href="https://cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a>托管<a href="https://www.freenom.com/" target="_blank" rel="noopener">freenom</a>的域名<br>使用Cloudflare的优点  </p>
+<ul>
+<li>免费托管+免费cdn,可大幅度提高访问速度</li>
+<li>老牌稳定服务</li>
+<li>免备案cdn服务</li>
+</ul>
+<p>3.如何使用<br>将域名托管到Cloudflare后,添加一个CNAME记录<br>例: <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/QQ%E5%9B%BE%E7%89%8720200314201007.png" alt="图片加载失败"><br>做到此处,你已经完成了一大半。最后，你只需要在你的Github新建一个文件,命名为CNAME,文件内容如下</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">你的域名地址(无需写入<span class="keyword">http</span>/<span class="keyword">https</span>)</span><br></pre></td></tr></table></figure>
+<p>看到此处,你的Github博客就成功绑上域名了</p>
+<h2 id="3-Hexo博客搭建"><a href="#3-Hexo博客搭建" class="headerlink" title="3.Hexo博客搭建"></a>3.Hexo博客搭建</h2><h3 id="3-1简介"><a href="#3-1简介" class="headerlink" title="3.1简介"></a>3.1简介</h3><ul>
+<li>Hexo(中文官方网站)是一个快速, 简洁且高效的博客框架. 让上百个页面在几秒内瞬间完成渲染. Hexo支持Github Flavored Markdown的所有功能, 甚至可以整合Octopress的大多数插件. 并自己也拥有强大的插件系统.<h3 id="3-2配置SSH密钥与安装Hexo"><a href="#3-2配置SSH密钥与安装Hexo" class="headerlink" title="3.2配置SSH密钥与安装Hexo"></a>3.2配置SSH密钥与安装Hexo</h3>确保你已下载并安装git,安装完成后打开 Git Bash(以下命令皆在Git Bash使用)<br>首先先配置SSH key<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">cd</span> ~<span class="string">/.</span> ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br></pre></td></tr></table></figure>
+如果提示：No such file or directory 说明你是第一次使用git。<br>接着输入<figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
+然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown基本语法</title>
     <url>/2020/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">我展示的是一级标题</span><br><span class="line">=================</span><br><span class="line">我展示的是二级标题</span><br><span class="line">-----------------</span><br></pre></td></tr></table></figure>
 
@@ -225,7 +256,9 @@
 
 
 
-<p>节选自:<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/markdown/md-tutorial.html</a></p>
+<blockquote>
+<p>选自:<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/markdown/md-tutorial.html</a></p>
+</blockquote>
 ]]></content>
       <tags>
         <tag>Markdown</tag>
@@ -235,7 +268,7 @@
   <entry>
     <title>腾讯云cloud stdio搭建我的世界服务器</title>
     <url>/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<h1 id="注：本教程主要面向没有任何基础的用户，部分语言可能表达不是很准确。"><a href="#注：本教程主要面向没有任何基础的用户，部分语言可能表达不是很准确。" class="headerlink" title="注：本教程主要面向没有任何基础的用户，部分语言可能表达不是很准确。"></a>注：本教程主要面向没有任何基础的用户，部分语言可能表达不是很准确。</h1><p>   准备工作:<br>1.手，大脑(滑稽)<br>2.拥有一个<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号,因为接下来的注册cloud studio需要<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号</p>
+    <content><![CDATA[<h1 id="注：本教程主要面向有我的世界开服基础用户"><a href="#注：本教程主要面向有我的世界开服基础用户" class="headerlink" title="注：本教程主要面向有我的世界开服基础用户"></a>注：本教程主要面向有我的世界开服基础用户</h1><p>   准备工作:<br>1.手，大脑(滑稽)<br>2.拥有一个<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号,因为接下来的注册cloud studio需要<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号</p>
 <h1 id="一-基础配置"><a href="#一-基础配置" class="headerlink" title="一,基础配置"></a>一,基础配置</h1><ul>
 <li>注册且登陆<a href="https://cloudstudio.net/#openSignUp" target="_blank" rel="noopener">Cloud studio</a></li>
 <li>进入该界面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/1.png" class=""></li>
@@ -264,6 +297,7 @@
 <li>接着在终端输入wget 复制的链接地址<br>下载完成后先用tar -xzvf Sakura_frpc_linux_amd64.tar.gz解压文件，文件夹下会多出来一个Sakura_frpc_linux_amd64(文件可能不同，多出来的那个就是)文件。输入命令`cd Work，直接回车，再次输入命令./Sakura_frpc_linux_amd64就ok了。<br>注;如使用./打开文件显示权限不足 请使用指令  chmod 777 Sakura_frpc_linux_amd64</li>
 <li>接着就是使用映射（此部分不截图了）<br>打开软件后<br>输入账号 密码<br>接着选择你刚刚创建的隧道的路线，即可完成映射，复制地址，开始游玩吧</li>
 </ul>
+<p>​    </p>
 ]]></content>
       <tags>
         <tag>白嫖</tag>
