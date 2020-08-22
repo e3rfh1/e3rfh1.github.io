@@ -9,24 +9,24 @@
 <h4 id="使用Fiddler"><a href="#使用Fiddler" class="headerlink" title="使用Fiddler"></a>使用Fiddler</h4><ul>
 <li><p>设置</p>
 <p>打开Fiddler，进入Tools-Options。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/1.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/1.png" alt></p>
 <p>在”HTTPS”标签页，开启截获HTTPS的功能。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/2.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/2.png" alt></p>
 <p>在”Connections”标签页将端口改为8888(端口号可随意更改)，并允许其他设备连接Fiddler。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/3.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/3.png" alt></p>
 <p>重启 Fiddler</p>
 </li>
 </ul>
 <ul>
 <li><p>使用</p>
 <p>命令行中输入<code>ipconfig</code>，查看IP配置，获取本机IP</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/4.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/4.png" alt></p>
 <p>进入iOS的Wi-Fi设置，更改HTTPS代理配置。模式设为手动，服务器设为电脑的内网IP，端口设为<code>8888</code>，鉴定无需打开，最后保存设置。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/5.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/5.jpg" alt></p>
 <p>利用Safari，地址框输入电脑内网IP+英文冒号+端口，形如192.168.1.100:8888，点击”FiddlerRoot certificate”，安装一个名为”DO_NOT_TRUST_FiddlerRoot”的描述文件并信任。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/6.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/6.jpg" alt></p>
 <p>至此，回到PC上的Fiddler，就可以看到成功从iPhone/iPad截获的包了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/7.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/7.png" alt></p>
 </li>
 </ul>
 ]]></content>
@@ -62,7 +62,7 @@
 如果提示：No such file or directory 说明你是第一次使用git。<br>接着输入<figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
 然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/124527537537537.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/124527537537537.png" alt></p>
 <p>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
 <h3 id="3-3-测试是否成功"><a href="#3-3-测试是否成功" class="headerlink" title="3.3 测试是否成功"></a>3.3 测试是否成功</h3><p><code>$ ssh -T git@github.com # 注意邮箱地址不用改</code></p>
 <p>  如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>，输入yes，然后会看到：</p>
@@ -75,18 +75,18 @@
 <h3 id="4-3-初始化"><a href="#4-3-初始化" class="headerlink" title="4.3 初始化"></a>4.3 初始化</h3><p>  在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是<code>F:\Workspaces\hexo</code>，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。</p>
   <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /f/Workspaces/hexo/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo init</span></span><br></pre></td></tr></table></figure>
 
-<p>  hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图：<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/20160818_115922_773_1148.png" alt=""></p>
+<p>  hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图：<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/20160818_115922_773_1148.png" alt></p>
   <figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo g <span class="comment"># 生成</span></span><br><span class="line"><span class="variable">$ </span>hexo s <span class="comment"># 启动服务</span></span><br></pre></td></tr></table></figure>
 
-<p>  执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：<br><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/SD5AD5151G5D.png" alt=""></p>
+<p>  执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：<br><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/SD5AD5151G5D.png" alt></p>
 <p><code>hexo s</code>是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故。</p>
-<p>第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：<br><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/GHFJLKJ;DFDFDHKJ.png" alt=""></p>
+<p>第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：<br><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/GHFJLKJ;DFDFDHKJ.png" alt></p>
 <h3 id="4-4-修改主题"><a href="#4-4-修改主题" class="headerlink" title="4.4 修改主题"></a>4.4 修改主题</h3><p>  既然默认主题很丑，那我们别的不做，首先来替换一个好看点的主题。</p>
 <p>  个人比较喜欢的主题：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></p>
 <p>  首先下载这个主题：</p>
   <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">$ cd <span class="regexp">/f/</span>Workspaces<span class="regexp">/hexo/</span></span><br><span class="line">$ git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/iissnan/</span>hexo-theme-<span class="keyword">next</span>.git themes<span class="regexp">/next</span></span><br></pre></td></tr></table></figure>
 
-<p>  下载后的主题都在这里：<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/QQ%E5%9B%BE%E7%89%8720200811204611.png" alt=""></p>
+<p>  下载后的主题都在这里：<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/QQ%E5%9B%BE%E7%89%8720200811204611.png" alt></p>
 <p>  修改<code>_config.yml</code>中的<code>theme: landscape</code>改为<code>theme: next</code>，然后重新执行<code>hexo g</code>来重新生成。</p>
 <p>  如果出现一些莫名其妙的问题，可以先执行<code>hexo clean</code>来清理一下public的内容，然后再来重新生成和发布。</p>
 <h3 id="4-5-上传之前"><a href="#4-5-上传之前" class="headerlink" title="4.5 上传之前"></a>4.5 上传之前</h3><p>  在上传代码到github之前，一定要记得先把你以前所有代码下载下来（虽然github有版本管理，但备份一下总是好的），因为从hexo提交代码时会把你以前的所有代码都删掉。</p>
@@ -106,7 +106,7 @@
 <p>  其它命令不确定，部署这个命令一定要用git bash，否则会提示<code>ermission denied (publickey)</code>.</p>
 <p>  打开你的git bash，输入<code>hexo d</code>就会将本次有改动的代码全部提交，没有改动的不会：</p>
 <h3 id="4-7-保留CNAME、README-md等文件"><a href="#4-7-保留CNAME、README-md等文件" class="headerlink" title="4.7 保留CNAME、README.md等文件"></a>4.7 保留CNAME、README.md等文件</h3><p>  提交之后网页上一看，发现以前其它代码都没了，此时不要慌，一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录的：</p>
-<p>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/201602020818_141037_580_8035.png" alt=""></p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/201602020818_141037_580_8035.png" alt></p>
 <p>  由于hexo默认会把所有md文件都转换成html，包括README.md，所有需要每次生成之后、上传之前，手动将README.md复制到public目录，并删除README.html。</p>
 <h3 id="4-8-常用hexo命令"><a href="#4-8-常用hexo命令" class="headerlink" title="4.8 常用hexo命令"></a>4.8 常用hexo命令</h3><p>  常见命令</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> #新建文章</span><br><span class="line">hexo new<span class="built_in"> page </span><span class="string">"pageName"</span> #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo<span class="built_in"> server </span>#开启预览访问端口（默认端口4000，<span class="string">'ctrl + c'</span>关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
@@ -124,13 +124,13 @@
 <p>  <code>hexo new &#39;my-first-blog&#39;</code></p>
 <p>  hexo会帮我们在<code>_posts</code>下生成相关md文件：</p>
 <p>  我们只需要打开这个文件就可以开始写博客了，默认生成如下内容：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/20160823_1GH83325_470_9306.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/20160823_1GH83325_470_9306.png" alt></p>
 <p>  当然你也可以直接自己新建md文件，用这个命令的好处是帮我们自动生成了时间。</p>
 <p>  一般完整格式如下：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">postName</span> <span class="comment">#文章页面上的显示名称，一般是中文</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="number">-12</span><span class="number">-02</span> <span class="number">15</span><span class="string">:30:16</span> <span class="comment">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">默认分类</span> <span class="comment">#分类</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">[tag1,tag2,tag3]</span> <span class="comment">#文章标签，可空，多标签请用格式，注意:后面有个空格</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="string">以下是正文</span></span><br></pre></td></tr></table></figure>
 <p>  那么<code>hexo new page &#39;postName&#39;</code>命令和<code>hexo new &#39;postName&#39;</code>有什么区别呢？</p>
 <p><code>hexo new page &quot;my-second-blog&quot;</code></p>
-<p>  生成如下：<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/20160823_1848FFF52_854_6502.png" alt=""></p>
+<p>  生成如下：<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/20160823_1848FFF52_854_6502.png" alt></p>
 <p>  最终部署时生成：<code>hexo\public\my-second-blog\index.html</code>，但是它不会作为文章出现在博文目录。</p>
 <h3 id="4-11-写博客工具"><a href="#4-11-写博客工具" class="headerlink" title="4.11 写博客工具"></a>4.11 写博客工具</h3><p>  这里推荐使用 <a href="https://typora.io/" target="_blank" rel="noopener">typora</a> 来写，该软件页面简洁，整体使用起来比较舒适。</p>
 <h2 id="5-美化"><a href="#5-美化" class="headerlink" title="5. 美化"></a>5. 美化</h2><h3 id="5-1-github图床搭建"><a href="#5-1-github图床搭建" class="headerlink" title="5.1 github图床搭建"></a>5.1 github图床搭建</h3><ul>
@@ -142,8 +142,8 @@
 <h4 id="5-1-1-GitHub-仓库设置"><a href="#5-1-1-GitHub-仓库设置" class="headerlink" title="5.1.1 GitHub 仓库设置"></a>5.1.1 GitHub 仓库设置</h4><p>  <code>流程：新建 public 仓库 -&gt; 创建 token -&gt; 复制 token 备用</code></p>
 <h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><p>  点击 git 主页右上角的<code>+</code>创建 <code>New repository</code>；</p>
 <p>  具体流程跟创建博客差不多一样，但区别在填写仓库信息</p>
-<p>  填写仓库信息，例如我就创建了一个 <code>cloudimg</code> 的仓库。这里注意，仓库得设置为 <code>Public</code> 因为后面通过客户端访问算是外部访问，因此无法访问 <code>Private</code> ，这样的话图片传上来之后只能存储不能显示。所以要设置为 <code>Public</code>。<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/100000000000000000000000000000(1).jpg" alt=""></p>
-<h4 id="创建-token-并复制保存"><a href="#创建-token-并复制保存" class="headerlink" title="创建 token 并复制保存"></a>创建 token 并复制保存</h4><p>  此时仓库已经建立，点击右上角头像，然后进入设置；<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/BUIGHOUHOIAS555SDAS.jpg" alt=""></p>
+<p>  填写仓库信息，例如我就创建了一个 <code>cloudimg</code> 的仓库。这里注意，仓库得设置为 <code>Public</code> 因为后面通过客户端访问算是外部访问，因此无法访问 <code>Private</code> ，这样的话图片传上来之后只能存储不能显示。所以要设置为 <code>Public</code>。<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/100000000000000000000000000000(1).jpg" alt></p>
+<h4 id="创建-token-并复制保存"><a href="#创建-token-并复制保存" class="headerlink" title="创建 token 并复制保存"></a>创建 token 并复制保存</h4><p>  此时仓库已经建立，点击右上角头像，然后进入设置；<br>  <img src="https://cdn.jsdelivr.net/gh/e3rfh2/photos//img/BUIGHOUHOIAS555SDAS.jpg" alt></p>
 <p>  在页面最下找到 <code>Developer settings</code>，点击进入；</p>
 ]]></content>
       <tags>
@@ -175,7 +175,7 @@
 <h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">RUNOOB</span><span class="selector-class">.COM</span></span><br><span class="line"><span class="selector-tag">GOOGLE</span><span class="selector-class">.COM</span></span><br><span class="line">~~<span class="selector-tag">BAIDU</span><span class="selector-class">.COM</span>~~</span><br></pre></td></tr></table></figure>
 <p>显示效果如下</p>
 <p>RUNOOB.COM<br>GOOGLE.COM<br><del>BAIDU.COM</del></p>
-<h1 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h1><p>下划线可以通过 HTML 的 <u> 标签来实现：</p>
+<h1 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h1><p>下划线可以通过 HTML 的 <u> 标签来实现：</u></p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>带下划线文本<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>显示效果如下所示：</p>
 <p><u>带下划线文本</u></p>
@@ -362,7 +362,7 @@
 <td align="center">单元格</td>
 </tr>
 </tbody></table>
-<h1 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h1><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。<br>目前支持的 HTML 元素有：<kbd> <b> <i> <em> <sup> <sub> <br>等 ，如：</p>
+<h1 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h1><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。<br>目前支持的 HTML 元素有：<kbd> <b> <i> <em> <sup> <sub> <br>等 ，如：</sub></sup></em></i></b></kbd></p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">使用 <span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Ctrl<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Alt<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Del<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span> 重启电脑</span><br></pre></td></tr></table></figure>
 <p>显示结果如下：</p>
 <p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
@@ -391,10 +391,10 @@
     <content><![CDATA[<h1 id="注：本教程主要面向有我的世界开服基础用户"><a href="#注：本教程主要面向有我的世界开服基础用户" class="headerlink" title="注：本教程主要面向有我的世界开服基础用户"></a>注：本教程主要面向有我的世界开服基础用户</h1><p>   准备工作:<br>1.手，大脑(滑稽)<br>2.拥有一个<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号,因为接下来的注册cloud studio需要<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号</p>
 <h1 id="一-基础配置"><a href="#一-基础配置" class="headerlink" title="一,基础配置"></a>一,基础配置</h1><ul>
 <li>注册且登陆<a href="https://cloudstudio.net/#openSignUp" target="_blank" rel="noopener">Cloud studio</a></li>
-<li>进入该界面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/1.png" class=""></li>
-<li>新建一个工作空间并打开<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/2.png" class=""></li>
-<li>等待一段时间后进入这个画面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/3.png" class=""></li>
-<li>按 Ctrl+ ~(键盘左上方ESC下面的按键)或点击<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png" class="">呼出终端</li>
+<li>进入该界面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/1.png" class></li>
+<li>新建一个工作空间并打开<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/2.png" class></li>
+<li>等待一段时间后进入这个画面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/3.png" class></li>
+<li>按 Ctrl+ ~(键盘左上方ESC下面的按键)或点击<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png" class>呼出终端</li>
 <li>接下来就是软件库更新,你需要依次在终端输入以下指令：<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">apt-<span class="builtin-name">get</span> update</span><br><span class="line">apt-<span class="builtin-name">get</span> upgrade</span><br></pre></td></tr></table></figure></li>
 <li>接下来需要安装Minecraft服务器运行所需要的一些基础运行环境，你需要输入以下指令：<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">apt-<span class="builtin-name">get</span> install nano wget<span class="built_in"> screen </span>bash default-jdk ufw</span><br></pre></td></tr></table></figure>
 注：若出现如图所示的情况（正常情况都会出现）
@@ -402,8 +402,8 @@
 </ul>
 <h1 id="二-服务器搭建"><a href="#二-服务器搭建" class="headerlink" title="二,服务器搭建"></a>二,服务器搭建</h1><ul>
 <li>新建两文件夹,依次输入以下命令(括号内的内容不用输入)<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">mkdir</span> <span class="title">Minecraft</span>     <span class="params">(此文件夹用来放置服务器)</span></span></span><br><span class="line"><span class="function"><span class="built_in">mkdir</span> <span class="title">ftp</span>           <span class="params">(此文件夹用来放置端口映射)</span></span></span><br></pre></td></tr></table></figure></li>
-<li>接着就是下载安装服务器<br>打开服务器文件下载地址,这里以<a href="https://mcversions.net/" target="_blank" rel="noopener">Mcversions</a> 为例<br>打开网址后 选择你要下载的服务器文件<br>这里以1.14.3为例<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/6.png" class="">
-单击下载后出现以下界面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/7.png" class="">
+<li>接着就是下载安装服务器<br>打开服务器文件下载地址,这里以<a href="https://mcversions.net/" target="_blank" rel="noopener">Mcversions</a> 为例<br>打开网址后 选择你要下载的服务器文件<br>这里以1.14.3为例<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/6.png" class>
+单击下载后出现以下界面<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/7.png" class>
 将鼠标移至第一个按钮，右键复制链接地址<br>接着进入刚刚新建的文件夹<br>输入 cd  Minecratf<br>再次输入 wget 刚才复制的链接地址
 等待下载完成即可，图片右下角显示的是已经下载数量，下载速度，剩余下载时间</li>
 <li>下载完成后,在终端输入以下指令<br>java -Xms512M -Xmx1024M -jar server.jar nogui
@@ -411,9 +411,9 @@
 <li>其余就是服务器设置（自行百度）</li>
 </ul>
 <h1 id="三-端口映射"><a href="#三-端口映射" class="headerlink" title="三,端口映射"></a>三,端口映射</h1><ul>
-<li>现在我们来下载<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura frp</a>端口映射<br>注册过程已跳过<br>打开管理面板，如图<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/10.png" class="">
-首先创建一条隧道<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/11.png" class="">
-服务器自选，我的世界服务器ip和端口在服务器设置文件中可以查看(自行百度)<br>完成后点击软件下载<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/12.png" class=""></li>
+<li>现在我们来下载<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura frp</a>端口映射<br>注册过程已跳过<br>打开管理面板，如图<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/10.png" class>
+首先创建一条隧道<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/11.png" class>
+服务器自选，我的世界服务器ip和端口在服务器设置文件中可以查看(自行百度)<br>完成后点击软件下载<img src="/2020/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%85%BE%E8%AE%AF%E4%BA%91cloud-stdio%E6%90%AD%E5%BB%BA%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/12.png" class></li>
 <li>接着在终端输入wget 复制的链接地址<br>下载完成后先用tar -xzvf Sakura_frpc_linux_amd64.tar.gz解压文件，文件夹下会多出来一个Sakura_frpc_linux_amd64(文件可能不同，多出来的那个就是)文件。输入命令`cd Work，直接回车，再次输入命令./Sakura_frpc_linux_amd64就ok了。<br>注;如使用./打开文件显示权限不足 请使用指令  chmod 777 Sakura_frpc_linux_amd64</li>
 <li>接着就是使用映射（此部分不截图了）<br>打开软件后<br>输入账号 密码<br>接着选择你刚刚创建的隧道的路线，即可完成映射，复制地址，开始游玩吧</li>
 </ul>
